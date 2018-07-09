@@ -1,0 +1,58 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-7" style="margin: 0 auto;">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> {{titulo}}
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Senha</th>
+                <th>Código Perfil</th>
+                <th>Descrição do Perfil</th>
+                <th>Número da Unidade</th>
+                <th>Situação do Usuário</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let usuario of usuarios; let i = index;">
+                <td>{{ usuario.codigoUsuario }}</td>
+                <td>{{ usuario.senha }}</td>
+                <td>{{ usuario.codigoPerfil }}</td>
+                <td>{{ usuario.descricaoPerfil }}</td>
+                <td>{{ usuario.numeroUnidade }}</td>
+                <td *ngIf='usuario.indicadorSituacao'>
+                  <div style="text-align: center;">
+                    <span class="badge badge-success">Ativo</span>
+                  </div>
+
+                </td>
+                <td *ngIf='!usuario.indicadorSituacao'>
+                  <div style="text-align: center;">
+                    <span class="badge badge-secondary"style="background-color: red;">Inativo</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="editar"style="margin: 0 auto">
+                  <a (click)="editar(usuario);"><i class="cui-pencil icons font-2xl d-block mt-0 " ></i></a>
+                </div>
+                </td>
+                <td>
+                  <a (click)="excluir(usuario);"><i class="icon-trash icons font-2xl d-block mt-0"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="8" style="text-align: right;">Total de Registros: {{ usuarios.length }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

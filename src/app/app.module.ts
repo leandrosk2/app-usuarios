@@ -1,16 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfigService } from './services/config.service'
+import { UsuarioService } from './services/usuario.service';
+import { IndexComponent } from './index/index.component';
+import { ConsultaComponent } from './usuario/consulta/consulta.component';
+import { MenuComponent } from './menu/menu.component';
+import { CadastroComponent } from './usuario/cadastro/cadastro.component';
+import { routing } from '../app.routes';
+// Alert Component
+import { AlertModule } from 'ngx-bootstrap/alert';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IndexComponent,
+    ConsultaComponent,
+    MenuComponent,
+    CadastroComponent
+    
+
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    routing,
+    NgbModule.forRoot(),
+    FormsModule,
+    AlertModule.forRoot()
+    
   ],
-  providers: [],
+  providers: [ConfigService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
