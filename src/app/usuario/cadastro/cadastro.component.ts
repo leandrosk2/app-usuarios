@@ -13,9 +13,9 @@ import { Response } from '../../services/response';
   templateUrl: './cadastro.component.html',
 })
 export class CadastroComponent implements OnInit {
-  private titulo: string;
-  private isValid: boolean = false;
-  private usuario: Usuario = new Usuario();
+  titulo: string;
+  isValid: boolean = false;
+  usuario: Usuario = new Usuario();
 
   constructor(private usuarioService: UsuarioService,
     private router: Router,

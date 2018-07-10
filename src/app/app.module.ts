@@ -13,8 +13,6 @@ import { ConsultaComponent } from './usuario/consulta/consulta.component';
 import { MenuComponent } from './menu/menu.component';
 import { CadastroComponent } from './usuario/cadastro/cadastro.component';
 import { routing } from '../app.routes';
-// Alert Component
-import { AlertModule } from 'ngx-bootstrap/alert';
 
 
 
@@ -35,8 +33,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     FormsModule,
     routing,
     NgbModule.forRoot(),
-    FormsModule,
-    AlertModule.forRoot()
+    FormsModule
     
   ],
   providers: [ConfigService, UsuarioService],
