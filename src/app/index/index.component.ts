@@ -10,5 +10,8 @@ export function getAlertConfig(): AlertConfig {
   templateUrl: './index.component.html',
 })
 export class IndexComponent {
+<<<<<<< HEAD
   mensagem: String = 'Página Inicial';
+=======
+>>>>>>> 4c1fecf6ffe08be611c69c9cd55eabcce64361f6
 }

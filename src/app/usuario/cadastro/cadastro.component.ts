@@ -15,6 +15,7 @@ import { debounceTime } from 'rxjs/operators';
   templateUrl: './cadastro.component.html',
 })
 export class CadastroComponent implements OnInit {
+<<<<<<< HEAD
   titulo: String;
   isValid: Boolean = false;
   usuario: Usuario = new Usuario();
@@ -22,6 +23,8 @@ export class CadastroComponent implements OnInit {
   private mensagemUsuario = new Subject<String>();
   staticAlertClosed = false;
   successMessage: String;
+=======
+>>>>>>> 4c1fecf6ffe08be611c69c9cd55eabcce64361f6
 
   constructor(private usuarioService: UsuarioService,
     private router: Router,
