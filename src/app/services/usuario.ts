@@ -4,6 +4,6 @@ export class Usuario {
     codigoPerfil: string;
     descricaoPerfil: string;
     numeroUnidade: number;
-    situacao: boolean;
+    indicadorSituacao: boolean;
     nomeUtilizador: string;
 }

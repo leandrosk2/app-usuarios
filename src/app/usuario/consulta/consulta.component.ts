@@ -12,9 +12,9 @@ import { Response } from '../../services/response';
   styleUrls: ['./consulta.component.css']
 })
 export class ConsultaComponent implements OnInit {
-  private usuarios: Usuario[] = new Array();
-  private titulo: string;
-  private usuario: Usuario = new Usuario();
+  usuarios: Usuario[] = new Array();
+  titulo: string;
+  usuario: Usuario = new Usuario();
 
   constructor(private usuarioService: UsuarioService,
     private router: Router) { }

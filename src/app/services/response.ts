@@ -1,5 +1,5 @@
 export class Response {
-    codigo: number;
-    mensagem: string;
+    codigo: Number;
+    mensagem: String;
 
 }

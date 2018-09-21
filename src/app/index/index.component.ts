@@ -10,5 +10,5 @@ export function getAlertConfig(): AlertConfig {
   templateUrl: './index.component.html',
 })
 export class IndexComponent {
-  private mensagem: string = "Página Inicial.";
+  mensagem: String = 'Página Inicial';
 }

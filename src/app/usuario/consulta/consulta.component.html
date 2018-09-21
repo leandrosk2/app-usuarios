@@ -15,6 +15,7 @@
                 <th>Descrição do Perfil</th>
                 <th>Número da Unidade</th>
                 <th>Situação do Usuário</th>
+                <th>Nome do Utilizador</th>
                 <th>Editar</th>
                 <th>Excluir</th>
               </tr>
@@ -34,16 +35,21 @@
                 </td>
                 <td *ngIf='!usuario.indicadorSituacao'>
                   <div style="text-align: center;">
-                    <span class="badge badge-secondary"style="background-color: red;">Inativo</span>
+                    <span class="badge badge-secondary" style="background-color: red;">Inativo</span>
+                  </div>
+                </td>
+                <td>{{ usuario.nomeUtilizador }}</td>
+                <td>
+                  <div class="editar" style="margin: 0 auto">
+                    <a (click)="editar(usuario);">
+                      <i class="cui-pencil icons font-2xl d-block mt-0 "></i>
+                    </a>
                   </div>
                 </td>
                 <td>
-                  <div class="editar"style="margin: 0 auto">
-                  <a (click)="editar(usuario);"><i class="cui-pencil icons font-2xl d-block mt-0 " ></i></a>
-                </div>
-                </td>
-                <td>
-                  <a (click)="excluir(usuario);"><i class="icon-trash icons font-2xl d-block mt-0"></i></a>
+                  <a (click)="excluir(usuario);">
+                    <i class="icon-trash icons font-2xl d-block mt-0"></i>
+                  </a>
                 </td>
               </tr>
               <tr>
