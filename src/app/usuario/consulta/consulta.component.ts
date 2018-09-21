@@ -17,6 +17,9 @@ export class ConsultaComponent implements OnInit {
   titulo: string;
   usuario: Usuario = new Usuario();
 =======
+   usuarios: Usuario[] = new Array();
+   titulo: string;
+   usuario: Usuario = new Usuario();
 >>>>>>> 4c1fecf6ffe08be611c69c9cd55eabcce64361f6
 
   constructor(private usuarioService: UsuarioService,

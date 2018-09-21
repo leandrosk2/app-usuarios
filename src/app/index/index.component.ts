@@ -13,5 +13,6 @@ export class IndexComponent {
 <<<<<<< HEAD
   mensagem: String = 'Página Inicial';
 =======
+   mensagem: string = "Página Inicial.";
 >>>>>>> 4c1fecf6ffe08be611c69c9cd55eabcce64361f6
 }

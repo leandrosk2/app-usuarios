@@ -24,6 +24,9 @@ export class CadastroComponent implements OnInit {
   staticAlertClosed = false;
   successMessage: String;
 =======
+  titulo: string;
+  isValid: boolean = false;
+  usuario: Usuario = new Usuario();
 >>>>>>> 4c1fecf6ffe08be611c69c9cd55eabcce64361f6
 
   constructor(private usuarioService: UsuarioService,
